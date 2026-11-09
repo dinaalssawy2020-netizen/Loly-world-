@@ -3,105 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title> 💜 loly world 💜</title>
-<meta name="theme-color" content="#a855f7">
+<title>عالم لولي 💜</title>
 <style>
-*{box-sizing:border-box;font-family:system-ui} body{margin:0;background:#fdf4ff;color:#3b0764;padding-bottom:80px}
-.top{background:linear-gradient(135deg,#c084fc,#a855f7,#ec4899);color:#fff;padding:18px;border-radius:0 0 28px 28px;text-align:center}
-.top h1{margin:0} .stats{display:flex;gap:10px;justify-content:center;margin-top:10px}
-.pill{background:rgba(255,255,255,.9);color:#7e22ce;padding:8px 14px;border-radius:20px;font-weight:bold}
-.char{width:150px;height:190px;margin:15px auto;background:#fff;border-radius:60px 60px 30px 30px;position:relative;text-align:center;box-shadow:0 10px 20px #e9d5ff;border:3px solid #d8b4fe;overflow:hidden}
-.hair{position:absolute;top:0;left:20px;right:20px;height:90px;background:#111;border-radius:60px 60px 20px 20px}
-.hair2{position:absolute;top:60px;left:5px;width:28px;height:110px;background:#111;border-radius:20px}
-.hair3{position:absolute;top:60px;right:5px;width:28px;height:110px;background:#111;border-radius:20px}
-.face{position:absolute;top:55px;left:50%;transform:translateX(-50%);font-size:50px}
-.body{position:absolute;bottom:0;left:0;right:0;height:70px;background:#a855f7;color:#fff;padding-top:8px;font-size:22px}
-.card{background:#fff;margin:12px;border-radius:20px;padding:14px;box-shadow:0 4px 12px #f3e8ff}
-.card h3{margin:0 0 6px} button{width:100%;padding:13px;border:0;border-radius:14px;font-weight:bold;font-size:16px;cursor:pointer;margin-top:8px}
-.btn-p{background:#a855f7;color:#fff} .btn-pink{background:#ec4899;color:#fff} .btn-y{background:#facc15;color:#3b0764}
-.tabs{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;border-top:2px solid #e9d5ff}
-.tabs button{flex:1;background:none;padding:12px;font-size:15px}
-.tabs button.active{color:#a855f7;border-top:3px solid #a855f7}
-.shop{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.item{background:#fdf4ff;padding:12px;border-radius:16px;text-align:center;border:2px solid #e9d5ff}
-.item button{padding:8px}
+*{box-sizing:border-box;font-family:system-ui} body{margin:0;background:#fdf4ff;overflow:hidden}
+.top{background:linear-gradient(135deg,#c084fc,#a855f7,#ec4899);color:#fff;padding:10px;text-align:center}
+.top b{background:rgba(255,255,255,.9);color:#7e22ce;padding:5px 10px;border-radius:15px;margin:0 3px;display:inline-block}
+#game{width:100%;height:420px;background:#e9d5ff;position:relative;overflow:hidden;border-bottom:3px solid #a855f7}
+.road{position:absolute;bottom:0;left:0;right:0;height:140px;background:#f8fafc;border-top:4px dashed #fff}
+.building{position:absolute;top:20px;width:95px;height:150px;border-radius:15px 15px 0 0;text-align:center;padding-top:8px;font-size:22px;color:#fff;font-weight:bold}
+#b1{left:10px;background:#ec4899} #b2{left:125px;background:#a855f7} #b3{left:240px;background:#f59e0b}
+#girl{position:absolute;width:62px;height:95px;left:160px;top:230px;transition:.1s;text-align:center;z-index:10}
+.hair{position:absolute;top:0;left:0;right:0;height:65px;background:#111;border-radius:30px 30px 12px 12px;z-index:1}
+.face2{position:absolute;top:18px;left:8px;right:8px;height:45px;background:#ffdbac;border-radius:20px;z-index:2}
+.eye{position:absolute;top:18px;font-size:16px} .mouth{position:absolute;top:35px;left:50%;transform:translateX(-50%);font-size:10px}
+.body2{position:absolute;bottom:0;left:10px;right:10px;height:38px;background:#a855f7;border-radius:12px;color:#fff;font-size:10px;padding-top:5px;z-index:3}
+#msg{background:#fff;margin:10px;border-radius:15px;padding:12px;text-align:center;font-weight:bold;min-height:55px;box-shadow:0 4px 10px #e9d5ff}
+.controls{display:flex;justify-content:center;gap:10px;padding:5px}
+.controls button{width:60px;height:55px;font-size:24px;border-radius:15px;border:0;background:#fff;box-shadow:0 3px 8px #ddd}
+.big{width:100%;padding:13px;border:0;border-radius:14px;background:#a855f7;color:#fff;font-weight:bold;font-size:16px;margin-top:8px}
 </style>
 </head>
 <body>
 <div class="top">
-<h1>💜 loly  💜</h1>
-<p> أجمل بنت شطوره !</p>
-<div class="stats">
-<div class="pill">🪙 <span id="coins">100</span></div>
-<div class="pill">❤️ <span id="hearts">5</span></div>
-<div class="pill">⭐ <span id="stars">1</span> نجمة</div>
+<div>💜 عالم لولي 💜</div>
+<div style="margin-top:6px"><b>🪙 <span id="coins">100</span></b> <b>❤️ <span id="hearts">5</span></b> <b>👗 <span id="outfit">موف</span></b></div>
+</div>
+
+<div id="game">
+<div class="building" id="b1">💄<br>محل<br>ميكب</div>
+<div class="building" id="b2">👗<br>محل<br>لبس</div>
+<div class="building" id="b3">🧋<br>كافيه</div>
+<div class="road"></div>
+<div id="girl">
+<div class="hair"></div>
+<div class="face2">
+<span class="eye" style="left:6px">👁️</span><span class="eye" style="right:6px">👁️</span>
+<div class="mouth">😊</div>
+</div>
+<div class="body2">💜 لولي</div>
 </div>
 </div>
 
-<div id="home">
-<div class="char">
-<div class="hair"></div><div class="hair2"></div><div class="hair3"></div>
-<div class="face">😊</div>
-<div class="body" id="myOutfit">💜 فستان موف</div>
-</div>
-<p style="text-align:center;font-weight:bold">لولي - شعر أسود طويل - بتحب الموف</p>
+<div id="msg">أهلاً يا لولي! امشي بالزراير وروحي لأي محل 💜</div>
 
-<div class="card">
-<h3>🌸 مهمة اليوم - هادفة</h3>
-<p id="mission"> تنظيم شنطتي     </p>
-<p>المكافأة: +50 🪙 +1 ❤️</p>
-<button class="btn-p" onclick="doMission()">خلصت المهمة ✅</button>
+<div class="controls">
+<button onclick="move(-25)">◀️</button>
+<button onclick="move(25)">▶️</button>
+<button onclick="enterShop()">🚪 ادخلي</button>
+<button onclick="talk()"> كلمي</button>
 </div>
 
-<div class="card">
-<h3>🎀  لبس وميكب</h3>
-<div class="shop">
-<div class="item"><div style="font-size:35px">👗</div><b>فستان بينك</b><br>80 🪙<button class="btn-p" onclick="buy('فستان بينك 👗',80)">اشتري</button></div>
-<div class="item"><div style="font-size:35px">👑</div><b>تاج أميرة</b><br>120 🪙<button class="btn-p" onclick="buy('تاج أميرة 👑',120)">اشتري</button></div>
-<div class="item"><div style="font-size:35px">💄</div><b>روج موف</b><br>40 🪙<button class="btn-pink" onclick="buy('روج موف 💄',40)">اشتري</button></div>
-<div class="item"><div style="font-size:35px">👜</div><b>شنطة موف</b><br>90 🪙<button class="btn-p" onclick="buy('شنطة موف 👜',90)">اشتري</button></div>
-<div class="item"><div style="font-size:35px">🛋️</div><b>كنبة أوضتك</b><br>150 🪙<button class="btn-y" onclick="buy('كنبة جديدة 🛋️',150)">اشتري</button></div>
-<div class="item"><div style="font-size:35px">📚</div><b>كتاب انجليزي</b><br>30 🪙<button class="btn-y" onclick="buy('كتاب انجليزي 📚',30)">اشتري</button></div>
-</div>
-</div>
-
-<div class="card">
-<h3>صاحباتك في النادي </h3>
-<p>👧 <b>مريم:</b> وحشتيني يالولو ؟</p>
-<button class="btn-pink" onclick="chat()">ردي عليها 💜</button>
-<p id="chatBox" style="color:#a855f7;font-weight:bold"></p>
-</div>
-</div>
-
-<div id="room" style="display:none">
-<div class="card"><h3>🛏️ أوضتك</h3><p>أوضتك بدأت تكبر! كل ما تشتري حاجة هتظهر هنا:</p><p id="myRoom">🛏️ سرير - 🪞 مراية - 💜 دولاب موف</p><p>مستواكي: <span id="level">مبتدئة جميلة</span></p></div>
-<div class="card"><h3>📖 درس اليوم</h3><p><b>كلمة انجليزي:</b> Kind = طيبة 💜</p><p>لو ساعدتي حد النهاردة انتي Kind!</p><button class="btn-y" onclick="learn()">اتعلمت الكلمة +20 🪙</button></div>
-</div>
-
-<div class="tabs">
-<button class="active" onclick="show('home',this)">🏠 بيتي</button>
-<button onclick="show('room',this)">🛏️ أوضتي</button>
-<button onclick="alert('هتفتحي المدينة قريب! استني التحديث الجاي 💜')">🏙️ المدينة</button>
-</div>
+<button class="big" onclick="changeLook()">✨ غيري ستايل لولي</button>
 
 <script>
-let coins=100, hearts=5, stars=1;
-let missions=[
-"نفكر نبقي مميزين ازاي   ",
-"نظمي أوضتك ورتبي دولابك",
-"نعمل ايه مفيد ",
-"ساعدي مامي   ",
-"اتصلي بصحبتك واطمني عليها",
-"ذاكري 30 دقيقه  ",
-"اعملي خير    "
-];
-let mi=0;
-function update(){document.getElementById("coins").innerText=coins;document.getElementById("hearts").innerText=hearts;document.getElementById("stars").innerText=stars;}
-function doMission(){coins+=50;hearts+=1;stars+=1;mi=(mi+1)%missions.length;document.getElementById("mission").innerText=missions[mi];update();alert("برافو يا لولو ! 💜 انتي بنت شاطرة وهادفة! +50 🪙");if(stars>=5)document.getElementById("level").innerText={ أميرة  👑";}
-function buy(name,price){if(coins<price){alert("فلوسك مش كفاية! اعملي مهمة الأول 💜");return;}coins-=price;document.getElementById("myOutfit").innerText=name;document.getElementById("myRoom").innerText+=" - "+name;update();alert("اشتريتي "+name+"! شكلك قمر 💜");}
-function chat(){let msgs=["بتحبي الموف زيي 💜","يالا نذاكر سوا ","انتي صديقتي    ","هنذاكر ايه   "];document.getElementById("chatBox").innerText="مريم: "+msgs[Math.floor(Math.random()*msgs.length)];hearts+=1;update();}
-function learn(){coins+=20;update();alert("شاطرة! اتعلمتي كلمة جديدة 📚");}
-function show(id,btn){document.getElementById("home").style.display=id=="home"?"block":"none";document.getElementById("room").style.display=id=="room"?"block":"none";document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");}
+let x=160, coins=100, hearts=5, looks=["💜 فستان موف","🩷 فستان بينك","👑 أميرة","🎀 كيوت"];
+let li=0;
+function move(dx){x+=dx; if(x<0)x=0; if(x>300)x=300; document.getElementById("girl").style.left=x+"px";
+let m=document.getElementById("msg");
+if(x<90) m.innerText="انتي قدام محل الميكب 💄 دوسي ادخلي";
+else if(x>130 && x<200) m.innerText="انتي قدام محل اللبس 👗 دوسي ادخلي";
+else if(x>240) m.innerText="انتي قدام المكتبه 🧋 دوسي ادخلي";
+else m.innerText="لولي بتمشي في المدينة... 💜";
+}
+function enterShop(){
+if(x<90){coins+=20; hearts+=1; document.getElementById("msg").innerText="دخلتي محل الميكب! عملتي ميكب موف قمر 💄 +20 🪙";}
+else if(x>130 && x<200){coins+=30; document.getElementById("msg").innerText="دخلتي محل اللبس! اشتريتي فستان جديد 👗 +30 🪙"; changeLook();}
+else if(x>240){coins+=15; hearts+=2; document.getElementById("msg").innerText="دخلتي المكتبه! قراءتي كتاب  🧋 +15 🪙 +2 ❤️";}
+else{document.getElementById("msg").innerText="روحي قدام محل الأول وبعدين دوسي ادخلي 💜";}
+document.getElementById("coins").innerText=coins; document.getElementById("hearts").innerText=hearts;
+}
+function talk(){
+let t=["مريم: يا لولي شكلك قمر النهاردة 💜","كوكي: تعالي نروح المكتبه","كوكي: بحب شعرك الأسود الطويل!","مامي برافو يا لولي شاطرة"];
+document.getElementById("msg").innerText=t[Math.floor(Math.random()*t.length)]; hearts+=1; document.getElementById("hearts").innerText=hearts;
+}
+function changeLook(){li=(li+1)%looks.length; document.getElementById("outfit").innerText=looks[li]; document.querySelector(".body2").innerText="💜 لولي - "+looks[li]; document.getElementById("msg").innerText="غيرتي ستايلك لـ "+looks[li]+" ✨ شكلك تحفة!";}
 </script>
 </body>
-  </html>
+</html>
